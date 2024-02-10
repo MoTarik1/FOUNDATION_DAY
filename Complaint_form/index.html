@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="er">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-GLhlTQ8iQ73r2DO1u7F5YTwF+YdYYLvXv3i0T/AO9QF5eC4JFp5g5I5tq5hB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon-32x32.ico">
+
+    <script src="https://kit.fontawesome.com/e0866ca8be.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> <!--ربط ملف الجافا  -->
+
+    <title>صفحة الشكاوى</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding:1%;
+            max-width: 30%;
+            margin: 0 auto;
+        }
+
+        form {
+            margin-top: 1%;
+        }
+
+        .form-group {
+            margin-bottom: 0.5%;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #333;
+            padding: 2%;
+            margin-top: 2%;
+        }
+
+        .footer p {
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+            margin-top: 1%;
+        }
+
+        .contact-info a {
+            color: #fff;
+            margin-right: 1%;
+            text-decoration: none;
+        }
+
+        .animated {
+            animation-duration: 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            width: 40%;
+            padding: 30px;
+            text-align: center;
+            animation: fadeIn 1s both;
+        }
+
+        h2.animated {
+            animation: fadeIn 1s both;
+        }
+
+        form.animated {
+            animation: fadeIn 1s both;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container animated">
+        <h2 class="animated fadeIn"><i class="fas fa-exclamation-triangle"></i> نموذج الشكوى</h2>
+        <form action="https://getform.io/f/cf4a9b7f-d204-4482-97a3-2402ee4d71d1" method="POST" enctype="multipart/form-data" class="animated zoomIn">
+            
+            <div class="form-group">
+                <label for="name" style="font-size: 25px;"><i class="fas fa-user" style="font-size: 30px;"></i>:الأسم</label>
+                <input type="text" id="name" name="name" required style="font-size: 24px;">
+            </div>
+
+            <div class="form-group">
+                <label for="email" style="font-size: 25px;"><i class="fas fa-envelope" style="font-size: 30px;"></i>:البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required style="font-size: 24px;">
+            </div>
+
+            <div class="form-group">
+                <label for="gender" style="font-size: 25px;"><i class="fas fa-venus-mars" style="font-size: 30px;"></i>:الجنس</label>
+                <select id="gender" name="gender" required style="font-size: 24px;">
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age" style="font-size: 25px;"><i class="fas fa-birthday-cake" style="font-size: 30px;"></i>:العمر</label>
+                <input type="date" id="age" name="age" required style="font-size: 24px;">
+            </div>
+
+            <div class="form-group">
+                <label for="attachments"><i class="fas fa-paperclip" style="font-size: 18px;"></i> المرفقات:</label>
+                <input type="file" id="attachments" name="attachments[]" multiple>
+                <small>يمكنك تحميل ملفات متعددة.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="complaint"><i class="fas fa-comment" style="font-size: 18px;"></i>:نص الشكوى</label>
+                <textarea id="complaint" name="complaint" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="terms" style="font-size: 10px;">
+                    <input type="checkbox" id="terms" name="terms" required style="margin-right: 10px;">
+                    أوافق على <a href="terms.html" target="_blank">شروط الخدمة</a>
+                </label>
+            </div>
+
+            <button type="submit" class="animated"><i class="fas fa-chevron-circle-right"></i> إرسال الشكوى</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="contact-info">
+            <a href="tel:0123456789"><i class="fas fa-phone"></i> +966 51 039 5536</a>
+            <a href="mailto:example@email.com"><i class="fas fa-envelope"></i>hgfhyrhh10@email.com</a>
+        </div>
+        <p style="color: #fff; font-size: 1rem; margin: 0;">&copy; 2024 جميع الحقوق محفوظة لمحمد طارق السيد</p>
+    </div>
+</body>
+</html>

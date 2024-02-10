@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.content {
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /*  لتحديد الموقع النسبي للخلفية */
+    z-index: 1; /* رفع العناصر فوق الخلفية */
+}
+
+/* تكوين الصور بشكل عشوائي */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('Cookie Clipart.png') no-repeat, url('Cookie Clipart.png') no-repeat, url('Cookie Clipart.png') no-repeat;
+    background-size: 100px, 120px, 80px;
+    animation: rotate linear infinite;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    pointer-events: none;
+    filter: blur(5px); /*  تأثير الضبابية للخلفية */
+}
