@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://kss.sa/founding-day-story/fd_logo_arb_ver_brown_rgb/'); /* تدرج أسود شفاف فوق الصورة الخلفية */
+    background-size: cover; /* تغطية كامل المساحة */
+    background-position: center;
+    background-attachment: scroll; /* الصورة تتحرك مع التمرير */
+    color: #fff; /* لون النص */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 2000px; /* ارتفاع الصفحة لعرض التأثير */
+}
+
+.fade {
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* تأثير الانعكاس */
+}
+
+.fade.active {
+    opacity: 1;
+}
+
+
+header {
+    background-color: #644726;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 0px;
+    text-align: center;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* لون النص */
+    font-weight: bold; /* سماكة الخط */
+    font-size: 18px; /* حجم الخط */
+    padding: 5px 10px; /* تعديل المسافة بين النص والحواف */
+    transition: color 0.3s ease; /* تأثير الانتقال على لون النص */
+}
+
+nav ul li a:hover {
+    color: #333; /* لون النص عند التحويم */
+}
+main {
+    padding: 20px;
+    text-align: right;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 70px; /* حجم العناوين */
+}
+
+p {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-size: 30px; /* حجم النص الافتراضي */
+}
